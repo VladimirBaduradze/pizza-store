@@ -155,7 +155,9 @@ function totalPriceAndDelivery() {
 
     const currentPrice =
       parseInt(ammoutElement.innerText) * parseFloat(priceElement.innerText);
-    totalPrice += currentPrice;
+    // totalPrice += currentPrice;
+
+    totalPrice += Math.round(currentPrice * 100) / 100;
   });
 
   //show total price in cart
