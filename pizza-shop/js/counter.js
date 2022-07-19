@@ -157,7 +157,8 @@ function totalPriceAndDelivery() {
       parseInt(ammoutElement.innerText) * parseFloat(priceElement.innerText);
     // totalPrice += currentPrice;
 
-    totalPrice += Math.round(currentPrice * 100) / 100;
+    // totalPrice += Math.round(currentPrice * 100) / 100;
+    totalPrice += +currentPrice.toFixed(2)
   });
 
   //show total price in cart
